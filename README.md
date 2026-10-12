@@ -146,7 +146,7 @@ This creates `data/extracted_text.json` and `data/chunks.json`.
 First, build the original MiniLM baseline collection:
 
 ```powershell
-python build_vector_store.py
+python build_vector_store_bge.py
 ```
 
 Then build the experimental MPNet and BGE collections:
