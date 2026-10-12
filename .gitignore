@@ -1,0 +1,33 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets
+.env
+.env.*
+variables.env
+*.env
+.streamlit/secrets.toml
+
+# Local databases and generated data
+data/chroma_db/
+data/extracted_text.json
+data/chunks.json
+
+# Evaluation outputs (keep evaluation scripts and datasets)
+evaluation_results.json
+embedding_comparison_results.json
+
+# System and IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+# Original source documents
+data/raw_docs/
