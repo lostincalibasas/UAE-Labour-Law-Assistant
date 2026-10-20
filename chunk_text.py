@@ -217,6 +217,7 @@ def build_chunks(law_title, filename, text, splitter):
     return chunks
 
 
+
 def chunk_documents():
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
         documents = json.load(f)
