@@ -216,64 +216,6 @@ def build_chunks(law_title, filename, text, splitter):
             })
     return chunks
 
-    # last_number = 0
-
-    # for i, match in enumerate(matches):
-    #     end = (
-    #         matches[i + 1].start()
-    #         if i + 1 < len(matches)
-    #         else len(text)
-    #     )
-
-    #     body = text[match.end():end].strip()
-
-    #     if match.group("art"):
-    #         number = int(match.group("art"))
-
-    #         # Warn about suspicious ordering, but never invent a new number.
-    #         if number <= last_number:
-    #             print(
-    #                 f"WARNING: Article {number} appears after "
-    #                 f"Article {last_number} in {law_title}. "
-    #                 "Check the source text and heading detection."
-    #             )
-
-    #         last_number = max(last_number, number)
-    #         label = f"Article {number}"
-    #         title = pick_title(body)
-
-    #     else:
-    #         label = f"Schedule {match.group('sch')}"
-    #         title = ""
-
-    #     header = f"{law_title} | {label}"
-
-    #     if title:
-    #         header += f" | {title}"
-
-    #     # Keep small articles together; split only oversized articles.
-    #     pieces = (
-    #         splitter.split_text(body)
-    #         if len(body) > CHUNK_SIZE
-    #         else [body]
-    #     )
-
-    #     for piece in pieces:
-    #         piece = piece.strip()
-
-    #         # Preserve short passages rather than silently discarding them.
-    #         if not piece:
-    #             continue
-
-    #         chunks.append({
-    #             "text": f"{header}\n{piece}",
-    #             "source_document": law_title,
-    #             "filename": filename,
-    #             "article": label,
-    #         })
-
-    # return chunks
-
 
 def chunk_documents():
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
