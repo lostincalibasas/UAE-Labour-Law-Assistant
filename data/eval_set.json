@@ -1,0 +1,2510 @@
+{
+  "_meta": {
+    "purpose": "Ground-truth set for evaluating retrieval, citation and answer correctness of the UAE labour-law RAG.",
+    "status": "LLM-DRAFTED, NOT EXPERT-REVIEWED. Each question has reviewed_by=null until a compliance officer or lawyer signs off.",
+    "relevance_level": "(source_document, article) pairs, stable across re-chunking. expected_articles = articles that together contain the answer; any one counts for Hit/MRR, all count for Recall.",
+    "corpus": [
+      "Federal Decree-Law No. 33 of 2021",
+      "Cabinet Resolution No. 92 of 2022",
+      "Federal Decree-Law No. 9 of 2022",
+      "Cabinet Decision No. 106 of 2022"
+    ],
+    "corpus_caveat": "Answers are keyed to the supplied PDF texts only (unofficial translations; some articles are amended by later decrees). The set does not claim to reflect current UAE law.",
+    "quote_policy": "Every must_include fact with a quote is verifiable by verbatim match (whitespace/quote-insensitive) against chunk text of the stated article. Run: python eval_answers.py verify-set",
+    "must_not_cite": "Articles from the wrong law (e.g. private-sector rule for a domestic worker question). Citing one is a wrong-law flag."
+  },
+  "questions": [
+    {
+      "id": "Q001",
+      "category": "scenario",
+      "question": "I am on probation and want to join another company in the UAE. How much notice should I give?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The worker must notify the original employer in writing at least one month from the date of the wish to terminate.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9",
+          "quote": "he shall notify the original employer of the same in writing within not less than one month from the date of his wish to terminate the contract"
+        },
+        {
+          "fact": "The new employer compensates the original employer for recruitment/contracting costs, unless otherwise agreed.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9",
+          "quote": "the new employer shall compensate the original employer for the costs of recruitment or contracting with the worker, unless otherwise agreed upon"
+        }
+      ],
+      "must_not_include": [
+        "States 14 days as the notice for moving to another UAE employer",
+        "States 30/60/90 days notice under Article 43 as the probation rule"
+      ],
+      "must_not_cite": [],
+      "notes": "Core example from the user. 14 days applies to leaving the State (Art 9(4)) and to employer termination (Art 9(1)), not to moving to another UAE employer.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q002",
+      "category": "single_fact",
+      "question": "What is the maximum probation period for a private sector employee?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Probation may not exceed six months from the date work commences.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9",
+          "quote": "not exceeding (6) six months from the date of commencement of work"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q003",
+      "category": "single_fact",
+      "question": "Can my employer put me on probation a second time with the same company?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "A worker may not be placed on probation more than once at the same employer.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9",
+          "quote": "It is not permissible to appoint a worker under probationary period more than once at one employer"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q004",
+      "category": "single_fact",
+      "question": "How much notice must an employer give to end a worker's employment during probation?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The employer must give written notice at least 14 days before the termination date.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9",
+          "quote": "after notifying the latter of the same in writing fourteen (14) days at least before the date specified for the termination of service"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q005",
+      "category": "scenario",
+      "question": "I'm a foreign worker on probation and want to leave the UAE altogether. What notice do I give and what are the risks?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The foreign worker must notify the employer in writing at least 14 days before the termination date.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9",
+          "quote": "he shall notify the employer of the same in writing not less than fourteen (14) days from the date specified for the termination of the contract"
+        },
+        {
+          "fact": "If the worker returns within three months and obtains a new permit, the new employer pays the compensation, unless the worker and original employer agree otherwise.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9",
+          "quote": "If he wishes to return to the State and obtain a new work permit within (3) three months from the date of departure, the new employer shall pay the compensation"
+        },
+        {
+          "fact": "Leaving the State without following the Article causes a one-year work permit ban.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9",
+          "quote": "he shall not be granted a work permit to work in the State for one year from the date of leaving the State"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "Article 9(7): the Ministry may exclude some job categories from the ban. A complete answer may mention it.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q006",
+      "category": "single_fact",
+      "question": "What happens if either party ends the contract during probation without following the probation rules?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The breaching party pays the other compensation equal to the worker's wages for the notice period or the remaining part of it.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9",
+          "quote": "it shall pay to the other party compensation equal to the worker's wages for the notice period or the remaining period of the notice period"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q007",
+      "category": "scenario",
+      "question": "I have passed probation and want to resign. How much notice do I have to give?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Notice period agreed in the contract must be not less than 30 days and not more than 90 days.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43",
+          "quote": "provided that such period is not less than ( 30) thirty days and not more than ( 90) ninety days"
+        },
+        {
+          "fact": "Notice must be given in writing.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43",
+          "quote": "provided that the other party is notified in writing"
+        }
+      ],
+      "must_not_include": [
+        "Says the notice is 14 days or one month as the general resignation rule (those are probation figures)"
+      ],
+      "must_not_cite": [],
+      "notes": "Contrast with Q001: tests probation vs post-probation confusion.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q008",
+      "category": "single_fact",
+      "question": "What do I owe if I leave without serving my notice period?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The party that did not abide by the notice pays notice period allowance equal to the worker's wage for the full or remaining notice period, even if no damage resulted.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43",
+          "quote": "the compensation shall be equal to the worker's wage for the full notice period or the remaining part thereof"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q009",
+      "category": "single_fact",
+      "question": "If my employer terminates me, can I take time off during the notice period to look for a job?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The worker may be absent one working day per week without pay during the notice period to search for another job.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43",
+          "quote": "the worker shall have the right to be absent during the notice period for one working day without pay per week, in order to search for another job"
+        },
+        {
+          "fact": "The worker must notify the employer at least three days before the absence day.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43",
+          "quote": "he notifies the employer of the same (3) three days at least before the absence day"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q010",
+      "category": "single_fact",
+      "question": "Can an employment contract set a shorter notice period for the employer than for the worker?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The notice period must be the same for both parties unless a different arrangement serves the worker's interests.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 43",
+          "quote": "provided that the notice period is the same for both parties unless it serves the interests of the worker"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q011",
+      "category": "scenario",
+      "question": "I resign while I'm on annual leave. When does my notice period start counting?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 35"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The notice period starts only from the day after the day scheduled for the worker's return from leave, unless both parties agree otherwise.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 35",
+          "quote": "the validity of the notice period agreed upon in the employment contract shall not begin, except from the day following the day scheduled for the worker's return from the leave"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q012",
+      "category": "single_fact",
+      "question": "If I leave my job without a legitimate reason before my contract ends, can I get a new work permit?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 50"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "A foreign worker who leaves work for an illegitimate reason before contract end cannot get another work permit for one year from the date of absence.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 50",
+          "quote": "he shall not be granted another work permit to join another job in the State in accordance with the provisions hereof, for a period of one year from the date of the absence from work"
+        },
+        {
+          "fact": "The Ministry may exclude some job categories, skill levels or workers from this ban.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 50",
+          "quote": "The Ministry may exclude some job categories, skill levels or workers from the provision of Clause (1) of this Article"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q013",
+      "category": "numeric",
+      "question": "How many days of annual leave does a private sector employee get?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 29"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "At least 30 days with full wage for each year of service.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 29",
+          "quote": "Thirty days for each year of extended service"
+        },
+        {
+          "fact": "Two days per month if service is more than six months and less than a year.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 29",
+          "quote": "Two days for each month if his service term is more than six months and less than a year"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q014",
+      "category": "numeric",
+      "question": "How much paid sick leave does a private sector worker get, and does it apply during probation?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 31"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "No paid sick leave during probation (unpaid leave may be granted on a medical report).",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 31",
+          "quote": "The worker shall not be entitled to a paid sick leave during the probationary period"
+        },
+        {
+          "fact": "After probation, up to 90 days per year: first 15 days full pay, next 30 days half pay, remainder unpaid.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 31",
+          "quote": "not more than (90) ninety continuous or intermittent days per year"
+        },
+        {
+          "fact": "First 15 days at full pay.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 31",
+          "quote": "The first (15) fifteen days with full pay"
+        },
+        {
+          "fact": "Following 30 days at half pay.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 31",
+          "quote": "The following (30) thirty days with half pay"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q015",
+      "category": "numeric",
+      "question": "What is the maternity leave entitlement in the private sector?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 30"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Sixty days of maternity leave.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 30",
+          "quote": "maternity leave of (60) sixty days"
+        },
+        {
+          "fact": "First 45 days at full wage, following 15 days at half wage.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 30",
+          "quote": "The first (45) forty-five days with full wage"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q016",
+      "category": "single_fact",
+      "question": "Can my employer fire me because I'm pregnant or on maternity leave?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 30"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Terminating or giving notice of termination because of pregnancy, maternity leave or related absence is not permitted.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 30",
+          "quote": "It is not permissible to terminate the service of the female worker or notify her of the same because of the pregnancy, having a maternity leave or her absence from work"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q017",
+      "category": "numeric",
+      "question": "How many days of leave do I get when a close family member dies?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 32"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Five days for death of a spouse; three days for death of mother, father, son, brother, sister, grandson, grandfather or grandmother.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 32",
+          "quote": "A bereavement leave of (5) five days, in case of death of the husband or wife and (3) three days in case of death of the mother, father, son, brother, sister, grandson, grandfather or grandmother"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q018",
+      "category": "numeric",
+      "question": "Is there paid parental leave for a new father or mother in the private sector?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 32"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Five working days, continuous or intermittent, within six months of the child's birth.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 32",
+          "quote": "A parental leave for a period of ( 5) five working days"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q019",
+      "category": "numeric",
+      "question": "What are the maximum normal working hours in the private sector?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 17"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Eight hours per day or 48 hours per week.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 17",
+          "quote": "The maximum normal working hours for workers shall be (8) eight hours per day or (48) forty-eight hours per week"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q020",
+      "category": "numeric",
+      "question": "How is overtime paid, including at night, and what is the daily limit?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 19"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Overtime may not exceed two hours per day, generally.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 19",
+          "quote": "provided that they do not exceed two hours per day"
+        },
+        {
+          "fact": "Overtime is paid at basic wage plus an increase of not less than 25%.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 19",
+          "quote": "an increase of not less than ( 25 %) twenty five percent of that wage"
+        },
+        {
+          "fact": "Overtime between 10 pm and 4 am carries an increase of not less than 50% (shift workers excluded).",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 19",
+          "quote": "an increase of not less than ( %50) fifty percent of that wage"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q021",
+      "category": "numeric",
+      "question": "What do I get if my employer makes me work on a public holiday?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 28"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Another day off for each holiday worked, or that day's wage plus an increase of not less than 50% of the basic wage.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 28",
+          "quote": "plus an increase of not less than (%50) fifty percent of the basic wage for that day"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q022",
+      "category": "single_fact",
+      "question": "Am I entitled to study leave for my university exams?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 32"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Up to ten working days per year for exams, if enrolled at an approved institution and with at least two years' service at the employer.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 32",
+          "quote": "a period of ( 10) ten working days per year"
+        },
+        {
+          "fact": "Minimum two years of service with the employer.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 32",
+          "quote": "provided that the service term at the employer is not less than two years"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q023",
+      "category": "numeric",
+      "question": "How is end of service gratuity calculated for a full-time foreign worker, and is there a cap?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 51"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Requires at least one year of continuous service.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 51",
+          "quote": "who completed a year or more in continuous service"
+        },
+        {
+          "fact": "21 days' basic wage for each year of the first five years.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 51",
+          "quote": "A wage of (21) twenty one days for each year of the first five years of service"
+        },
+        {
+          "fact": "30 days' basic wage for each year beyond five years.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 51",
+          "quote": "A wage of (30) thirty days for each year exceeding such period"
+        },
+        {
+          "fact": "Total may not exceed two years' wage.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 51",
+          "quote": "the end of service benefits for the foreign worker in its entirety does not exceed two years' wage"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q024",
+      "category": "single_fact",
+      "question": "How long does an employer have to pay my final dues after my contract ends?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 53"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Within 14 days from the end date of the contract term.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 53",
+          "quote": "within ( 14) fourteen days from the end date of the contract term"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 19"
+        }
+      ],
+      "notes": "Domestic workers have a different period (10 days, Decree-Law 9 Art 19(9)).",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q025",
+      "category": "numeric",
+      "question": "What is the maximum my employer can deduct from my salary in total?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 25"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Total deductions/withholdings may not exceed 50% of the wage in any case.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 25",
+          "quote": "the percentage of deduction and/or withholding may not exceed (%50) fifty percent of the wage"
+        }
+      ],
+      "must_not_include": [
+        "States one quarter as the overall cap for a private sector worker"
+      ],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 16"
+        }
+      ],
+      "notes": "One quarter applies to domestic workers (Decree-Law 9 Art 16).",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q026",
+      "category": "single_fact",
+      "question": "Can my employer hold my passport?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 13"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The employer must not withhold the worker's official documents.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 13",
+          "quote": "Not withholding the official documents of the worker or forcing him to leave the State at the end of the employment relationship"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 11"
+        }
+      ],
+      "notes": "Private sector worker. Domestic variant is a separate question.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q027",
+      "category": "single_fact",
+      "question": "Can my private sector employer charge me recruitment fees?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 6"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The employer may not charge the worker recruitment and employment fees and costs, directly or indirectly.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 6",
+          "quote": "The employer is prohibited from charging the worker for the fees and costs of recruitment and employment or collecting them from him, whether directly or indirectly"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q028",
+      "category": "single_fact",
+      "question": "Can my employer refuse to give me an experience certificate when I leave?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 13"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "On request at contract expiry the employer must give an experience certificate without fees.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 13",
+          "quote": "a certificate of experience, without fees"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q029",
+      "category": "single_fact",
+      "question": "How long do I have to move out of company accommodation after my employment ends?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 16"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Within 30 days from the end of service, unless the employer approves a longer stay (at worker's cost or as agreed).",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 16",
+          "quote": "Evacuating the accommodation provided by the employer, within a period not exceeding (30) thirty days from the date of end of his service"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q030",
+      "category": "scenario",
+      "question": "Under what circumstances can my employer dismiss me without notice for being absent?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 44"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Absence without legitimate reason for more than 20 intermittent days in a year or more than 7 consecutive days.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 44",
+          "quote": "for more than ( 20) twenty intermittent days during one year or more than ( 7) seven consecutive days"
+        },
+        {
+          "fact": "Dismissal requires a prior written investigation and a written, justified decision handed to the worker.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 44",
+          "quote": "after conducting a written investigation with him and the dismissal decision shall be in writing and justified"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 19"
+        }
+      ],
+      "notes": "Domestic workers: 10 consecutive / 15 intermittent days (Decree-Law 9 Art 19(7)).",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q031",
+      "category": "scenario",
+      "question": "My employer assaulted me at work. Can I quit without notice and keep my end of service rights?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 45"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Worker may quit without notice and retain end-of-service rights if the employer or legal representative assaulted, used violence or harassed the worker at work.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 45",
+          "quote": "the employer or its legal representative assaulted the worker, committed violence or harassment against him at work"
+        },
+        {
+          "fact": "The worker must inform the competent authorities and the Ministry within five working days from when he was able to report.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 45",
+          "quote": "provided that he informs the competent authorities and the Ministry within (5) five working days from the date on which he was able to report"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 10"
+        }
+      ],
+      "notes": "Private sector (5 working days). Domestic variant (3 days) is separate.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q032",
+      "category": "numeric",
+      "question": "How much compensation can I get if I am unlawfully terminated for filing a complaint?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 47"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Termination because of a proven serious complaint to the Ministry or lawsuit against the employer is unlawful.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 47",
+          "quote": "due to filing a serious complaint to the Ministry or filing a lawsuit against the employer, whose validity is proven"
+        },
+        {
+          "fact": "Court-estimated fair compensation, capped at three months' wage based on the last wage.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 47",
+          "quote": "the amount of compensation does not exceed the worker's wage for a period of (3) three months"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q033",
+      "category": "single_fact",
+      "question": "Can my employer terminate me for health reasons while I still have leave balance?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 46"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The employer may not terminate for lack of health fitness before the worker uses legally accrued leaves; contrary agreements are void.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 46",
+          "quote": "The employer may not terminate the worker's service due to his lack of health fitness before using the legally accrued leaves"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q034",
+      "category": "single_fact",
+      "question": "How long can a non-compete clause last in my contract?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 10"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Not more than two years from contract expiry, limited in time, place and type of work to protect legitimate business interests.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 10",
+          "quote": "The non-competition period shall not be more than two years from the expiry date of the contract"
+        },
+        {
+          "fact": "The clause is void if the employer terminates the contract in violation of the Decree-Law.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 10",
+          "quote": "This requirement shall be nullified if the employer terminates the employment contract in violation of the provisions hereof"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q035",
+      "category": "single_fact",
+      "question": "Can an employment contract waive my statutory rights?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 65"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Provisions contradicting the Decree-Law are null and void unless more beneficial to the worker; waivers of rights that violate it are void.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 65",
+          "quote": "Each discharge, reconciliation or waiver of the rights arising for the worker hereunder shall be null and void if it violates its provisions"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q036",
+      "category": "scenario",
+      "question": "Can a 16-year-old work in a private company, and under what conditions?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 5"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Juveniles (15 to under 18) may be employed with the guardian's written consent and a medical fitness certificate.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 5",
+          "quote": "Written consent of the juvenile's guardian or custodian"
+        },
+        {
+          "fact": "Actual working hours may not exceed six hours per day.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 5",
+          "quote": "The actual working hours shall not exceed six hours per day"
+        },
+        {
+          "fact": "No work between 7 pm and 7 am.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 5",
+          "quote": "The juvenile shall not work between 7 pm and 7 am"
+        }
+      ],
+      "must_not_include": [
+        "States 18 as the minimum age for private sector employment"
+      ],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 4"
+        }
+      ],
+      "notes": "Domestic workers have a stricter minimum age of 18.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q037",
+      "category": "numeric",
+      "question": "How long do I have to file a labour claim against my private sector employer?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 54"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "A lawsuit cannot be heard after one year from the maturity date of the right.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 54",
+          "quote": "After one (1) year from the maturity date of the right subject to a lawsuit, the lawsuit cannot be heard"
+        }
+      ],
+      "must_not_include": [
+        "States three months as the limitation period for a private sector worker"
+      ],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 26"
+        }
+      ],
+      "notes": "Three months from termination is the DOMESTIC worker rule (Decree-Law 9 Art 26(2)). Article 54 was amended by Decree-Law 20 of 2023; the provided PDF text already reflects the amendment.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q038",
+      "category": "numeric",
+      "question": "Up to what claim value can MoHRE decide a labour dispute finally?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 54"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The Ministry issues a final decision if the claim is not more than AED 50,000, or if neither party complies with an amicable settlement decision regardless of value.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 54",
+          "quote": "if the value of the claim is not more than fifty thousand (50,000) UAE dirhams (AED)"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q039",
+      "category": "single_fact",
+      "question": "Do workers pay court fees for labour claims?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 55"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Labour claims are exempt from judicial fees; worker/heir requests are exempt up to AED 100,000.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 55",
+          "quote": "Labour claims shall be exempted from judicial fees at all stages of litigation and execution"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q040",
+      "category": "scenario",
+      "question": "What is the fine for an employer in the private sector who employs a worker with no work permit?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 60"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Fine of AED 50,000 to AED 200,000.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 60",
+          "quote": "A fine of not less than (AED 50,000) fifty thousand UAE Dirham and not more than (AED 200,000) two hundred thousand UAE Dirham"
+        },
+        {
+          "fact": "Employing a worker who is not permitted to work for the employer is listed among the violations.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 60",
+          "quote": "Employing a worker who is not permitted to work for him"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q041",
+      "category": "scope",
+      "question": "Does the main labour law apply to domestic workers?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 3"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "No. Domestic workers are excluded from the Decree-Law's scope.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 3",
+          "quote": "Domestic workers"
+        },
+        {
+          "fact": "Government employees and armed forces/police/security employees are also excluded.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 3",
+          "quote": "Employees of the armed forces, police and security"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q042",
+      "category": "cross_law",
+      "question": "What is the maximum probation period for a domestic worker?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 8"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Not more than six months from the date of employment.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 8",
+          "quote": "for a period of not more than (6) six months from the date of employment"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 9"
+        }
+      ],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q043",
+      "category": "cross_law",
+      "question": "How long can a domestic worker's fixed-term employment contract be?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 7"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "A limited contract lasts two years and may be renewed for a similar period.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 7",
+          "quote": "The duration of a limited employment contract is two years and may be renewed for a similar period"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q044",
+      "category": "cross_law",
+      "question": "How many days of paid sick leave does a domestic worker get per year?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 10"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "30 days per year of service, continuous or intermittent, on a medical report from an approved authority.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 10",
+          "quote": "Domestic workers are entitled to a sick leave of 30 days for each year of service"
+        },
+        {
+          "fact": "First 15 days paid in full, next 15 days at half pay.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 10",
+          "quote": "The first fifteen days are paid in full"
+        },
+        {
+          "fact": "No payment if the worker's behaviour contributed to the illness.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 10",
+          "quote": "If the domestic worker's behavior contributed to the illness, no payment will be made during sick leave"
+        }
+      ],
+      "must_not_include": [
+        "States 90 days of sick leave (private sector figure)"
+      ],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 31"
+        }
+      ],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q045",
+      "category": "cross_law",
+      "question": "How much annual leave does a domestic worker get and who pays for the flight home?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 10"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Not less than 30 days per year of service, paid in full before departure.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 10",
+          "quote": "an annual leave of not less than 30 days for each year of service"
+        },
+        {
+          "fact": "Employer pays the return ticket once every two years if the worker spends leave in the home country.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 10",
+          "quote": "the employer must incur the cost of the return ticket once every two years"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q046",
+      "category": "cross_law",
+      "question": "How quickly must a domestic worker's salary be paid?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 15"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Monthly salaries are paid in UAE dirhams within 10 days from the maturity date.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 15",
+          "quote": "Monthly salaries are to be paid in UAE dirhams within a period not exceeding 10 days from its maturity date"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q047",
+      "category": "cross_law",
+      "question": "What is the minimum age to hire a domestic worker?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 4"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Recruiting or hiring a domestic worker under 18 is prohibited.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 4",
+          "quote": "Recruiting or hiring a domestic worker under the age of 18 is prohibited"
+        }
+      ],
+      "must_not_include": [
+        "States 15 as the minimum age"
+      ],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 5"
+        }
+      ],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q048",
+      "category": "cross_law",
+      "question": "What is the maximum deduction from a domestic worker's pay for damage to the employer's property?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 16"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Deduction cannot exceed one quarter of the domestic worker's salary, with worker's consent or Ministry approval.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 16",
+          "quote": "the deduction cannot exceed one quarter of the domestic worker's salary"
+        }
+      ],
+      "must_not_include": [
+        "States five days' wage per month or 50% (private sector rules)"
+      ],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 25"
+        }
+      ],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q049",
+      "category": "cross_law",
+      "question": "Can an employer keep a domestic worker's passport, and is there a fine?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 11"
+        },
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 20"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The domestic worker should be allowed to retain all official documents.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 11",
+          "quote": "The domestic worker should be allowed to retain all official documents"
+        },
+        {
+          "fact": "Administrative fine of AED 500 per domestic worker for withholding identification documents.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 20",
+          "quote": "Withholding the domestic worker's identification documents 500 dirhams for each domestic worker"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "Fine is in Schedule 2, which the current chunker folds into 'Article 20'.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q050",
+      "category": "cross_law",
+      "question": "How long after a domestic worker's contract ends must the employer pay the final compensation?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 19"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Within 10 days from the contract expiry date, depending on circumstances and the Implementing Regulation.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 19",
+          "quote": "the employer shall pay the domestic worker's compensation within (10) ten days from the contract expiry date"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 53"
+        }
+      ],
+      "notes": "Private sector is 14 days.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q051",
+      "category": "unanswerable_partial",
+      "question": "How many days of end of service gratuity does a domestic worker get per year of service?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 22"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "States that the provided text does not give the amount; the UAE Cabinet is to adopt calculation and payment rules.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 22",
+          "quote": "the UAE Cabinet shall adopt the rules and regulations for calculation and payment of end of service gratuity for domestic workers"
+        }
+      ],
+      "must_not_include": [
+        "States 21 days or 30 days per year (private sector figures)"
+      ],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 51"
+        }
+      ],
+      "notes": "Tests whether the system invents a figure instead of saying the documents don't specify one.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q052",
+      "category": "scenario",
+      "question": "A domestic worker's employer assaulted her. Can she leave immediately, and what must she do?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 10"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "She may leave work without notice.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 10",
+          "quote": "he / she has the right to leave work without notice"
+        },
+        {
+          "fact": "She must immediately report to the competent authorities and notify the Ministry within three days of leaving the workplace.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 10",
+          "quote": "notify the Ministry within three days of leaving the workplace"
+        },
+        {
+          "fact": "She must return to the recruitment office for housing and give her contact details.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 10",
+          "quote": "return to the recruitment office that recruited him/her for housing"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 45"
+        }
+      ],
+      "notes": "Private sector rule is 5 working days (Art 45(2)).",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q053",
+      "category": "single_fact",
+      "question": "When can a domestic worker leave the job and keep her rights because of employer breach?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 10"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "If salary is reduced below contract or the employer fails contractual obligations, provided the Ministry is informed within two weeks.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 10",
+          "quote": "provided that they inform the Ministry within two weeks of the occurrence"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q054",
+      "category": "single_fact",
+      "question": "How soon must an employer report that a domestic worker has abandoned work?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 18"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Within five days.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 18",
+          "quote": "Employers must notify the Ministry within five days if a domestic worker abandons work"
+        },
+        {
+          "fact": "A worker leaving without the employer's knowledge must inform the Ministry within two days.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 18",
+          "quote": "A domestic worker must inform the Ministry within two days of leaving work without the employer's knowledge"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q055",
+      "category": "numeric",
+      "question": "How many hours of rest must a domestic worker get per day?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 7"
+        },
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 9"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "At least 12 hours of rest per day.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 7",
+          "quote": "provided that the worker has at least 12 hours of rest per day"
+        },
+        {
+          "fact": "Time spent eating or resting does not count as actual working hours.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 7",
+          "quote": "time spent eating or resting by the domestic worker shall not count toward actual working hours"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q056",
+      "category": "single_fact",
+      "question": "What if my domestic worker has to work on her weekly rest day?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 8"
+        },
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 9"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "She must get an alternative day off or be paid cash in lieu.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 8",
+          "quote": "the employee must be granted an alternative day off for rest or be paid cash in lieu of that day"
+        },
+        {
+          "fact": "She may not be required to work more than two consecutive rest days in any two weeks unless otherwise agreed.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 8",
+          "quote": "may not be required to work for more than two consecutive days of rest in any two weeks"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q057",
+      "category": "single_fact",
+      "question": "Can a domestic worker do extra work for my relatives?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 11"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Yes, with the worker's consent, for the employer's relatives up to the second degree.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 11",
+          "quote": "a domestic worker may work for any of the employer's relatives up to the second degree"
+        },
+        {
+          "fact": "Otherwise no work for parties other than the employer or named beneficiary unless the Ministry specifies.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 11",
+          "quote": "Domestic workers may not work for any party other than their employers or the beneficiary named in their employment contract"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q058",
+      "category": "scenario",
+      "question": "A domestic worker recruited by name wants to move to a new employer during her first contract. Who pays what?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6"
+        },
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 21"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The new employer pays part of the amount the original employer paid the recruitment office, calculated with the Article 6(2) formula.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6",
+          "quote": "the new employer is required to pay part of the amount paid by the original employer to the recruitment office"
+        },
+        {
+          "fact": "The new employer also pays the original employer's government fees, unless otherwise agreed.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6",
+          "quote": "the new employer will be responsible for paying the government fees incurred by the original employer for the recruitment and employment of the domestic worker, unless otherwise agreed by both parties"
+        },
+        {
+          "fact": "Domestic workers may transfer if contractual requirements are met, observing the original employer's rights.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 21",
+          "quote": "Domestic workers are permitted to transfer to new employers provided that all contractual requirements are met"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q059",
+      "category": "numeric",
+      "question": "How is the recruitment fee refund calculated when a domestic worker leaves early?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Refund = (total recruitment cost / contract duration in months) x remaining months.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6",
+          "quote": "( total cost of recruitment ÷ duration of the domestic worker's employment contract in months) x term remaining on the employment contract"
+        },
+        {
+          "fact": "Full refund if the case occurs in the first month or the worker is medically unfit during probation.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6",
+          "quote": "the recruitment office must refund the employer's recruitment fees in full"
+        },
+        {
+          "fact": "Refund must be paid within two weeks.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6",
+          "quote": "the office is required to refund the amounts listed in this article to the employer within two weeks"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q060",
+      "category": "single_fact",
+      "question": "Does the recruitment office have to refund me if I hired the domestic worker directly by name?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "No. If recruited directly, the office is exempt from the refund obligation in all cases in Article 6.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6",
+          "quote": "If the domestic worker was recruited directly, the recruitment office is exempt from the obligation to refund the specified amount in all cases outlined in this article"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q061",
+      "category": "scenario",
+      "question": "My domestic worker was incompetent during her probation. Can I get my recruitment fees back?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6"
+        },
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 8"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Offices must refund all or part of the fees if the worker shows incompetence and poor conduct during probation.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6",
+          "quote": "If the domestic worker demonstrates incompetence and poor conduct during the probationary period"
+        },
+        {
+          "fact": "Probation can last up to six months.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 8",
+          "quote": "for a period of not more than (6) six months from the date of employment"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q062",
+      "category": "numeric",
+      "question": "What bank guarantee does a domestic worker recruitment agency need?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 3"
+        },
+        {
+          "source_document": "Cabinet Resolution No. 92 of 2022",
+          "article": "Article 2"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "A bank guarantee of not less than AED 500,000 during the licence term.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 3",
+          "quote": "Legal persons and sole proprietorships are required to provide a bank guarantee of not less than AED 500,000"
+        },
+        {
+          "fact": "A shortfall must be topped up within 30 days.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 3",
+          "quote": "complete the guarantee amount within 30 days of the shortage occurring"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "C92 Art 2(1) states the same AED 500,000 requirement; both are accepted as relevant.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q063",
+      "category": "single_fact",
+      "question": "Can a recruitment agency charge the domestic worker a commission for finding the job?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 5"
+        },
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 4"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "No. The agency may not demand or accept any commission or charge expenses, directly or indirectly.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 5",
+          "quote": "It is prohibited for the Agency to demand or accept, directly or indirectly, any commission for securing the job from any domestic worker or to charge them any expenses"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 6"
+        }
+      ],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q064",
+      "category": "numeric",
+      "question": "What is the administrative fine if a recruitment office is late refunding fees to the employer?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 20"
+        },
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 6"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "AED 2,000 per case for failure to refund within two weeks of the worker's return or absence report.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 20",
+          "quote": "Failure to refund all or part of the recruitment fees to the employer within two weeks following the return of the domestic worker to the recruitment office or upon reporting the domestic worker's absence from work. 2,000 dirhams for each case"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "Schedule 2 is folded into 'Article 20' by the chunker.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q065",
+      "category": "numeric",
+      "question": "What is the fine if an employer or family member assaults a domestic worker?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 20"
+        },
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 15"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "AED 20,000 per case.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 20",
+          "quote": "assaults or harasses the domestic worker. 20,000 dirhams for each case"
+        },
+        {
+          "fact": "The Ministry may also suspend the employer's file.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 15",
+          "quote": "If it is proven that the employer or his representative has assaulted, harassed, or contempt the domestic worker in any way"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q066",
+      "category": "single_fact",
+      "question": "When can the Ministry suspend an employer's file for not paying wages to a domestic worker?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 15"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Non-payment of the agreed wage for more than two months.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 15",
+          "quote": "Non-payment of the agreed wage under the employment contract for a period of more than two months"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q067",
+      "category": "scenario",
+      "question": "What penalties apply to an employer who employs a domestic worker without a work permit?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 27"
+        },
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 20"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Criminal fine of AED 50,000 to AED 200,000 for providing employment without a work permit.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 27",
+          "quote": "A fine of at least AED 50,000 (Fifty Thousand Dirhams) and up to AED 200,000 (Two Hundred Thousand Dirhams) shall be imposed on those who commit the following"
+        },
+        {
+          "fact": "Administrative fine of AED 5,000 per illegal domestic worker.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 20",
+          "quote": "5,000 dirhams for each illegal domestic worker"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 60"
+        }
+      ],
+      "notes": "Two regimes apply; a full answer mentions both.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q068",
+      "category": "numeric",
+      "question": "How long does a domestic worker have to sue for her entitlements after the job ends?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 26"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "Not heard after three months from the date the employment relationship ended.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 26",
+          "quote": "shall not be heard after the lapse of three months from the date of termination of the employment relationship"
+        },
+        {
+          "fact": "Domestic workers' actions are exempt from judicial fees.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 26",
+          "quote": "Actions and applications filed by domestic workers shall be exempted from judicial fees"
+        }
+      ],
+      "must_not_include": [
+        "States one year as the limitation period"
+      ],
+      "must_not_cite": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 54"
+        }
+      ],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q069",
+      "category": "scenario",
+      "question": "A domestic worker and employer cannot settle a dispute. What happens next and how fast?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 13"
+        },
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 23"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The dispute must be referred to the Ministry; if no amicable settlement within two weeks of the complaint, it goes to the competent court.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 23",
+          "quote": "In the event that an amicable settlement cannot be reached within two (2) weeks of receiving the complaint, the dispute will be referred to the competent court"
+        },
+        {
+          "fact": "The Ministry refers the matter to court within two weeks of receiving the complaint, with a legal opinion memorandum.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 13",
+          "quote": "the Ministry will refer the matter to the appropriate court within two weeks of receiving the complaint"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q070",
+      "category": "scenario",
+      "question": "Who is responsible for a temporary-employment domestic worker if the beneficiary fails their obligations?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 9"
+        },
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 14"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "The recruitment office remains jointly responsible with the beneficiary and cannot evade its employer obligations.",
+          "source_document": "Cabinet Decision No. 106 of 2022",
+          "article": "Article 9",
+          "quote": "The office shall be jointly responsible for implementing these obligations with the beneficiary"
+        },
+        {
+          "fact": "The recruitment office functions as employer for temporary employment.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 14",
+          "quote": "The domestic workers recruitment office functions as the employer for temporary employment"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q071",
+      "category": "single_fact",
+      "question": "If a domestic worker travels abroad with the family, which rules apply?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 3"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "All parties must abide by the employment contract unless the destination country's laws provide otherwise.",
+          "source_document": "Federal Decree-Law No. 9 of 2022",
+          "article": "Article 3",
+          "quote": "it is mandatory for all parties to the employment contract to abide by the terms of the employment contract unless otherwise provided by the laws of the foreign country of destination"
+        }
+      ],
+      "must_not_include": [],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q072",
+      "category": "unanswerable_partial",
+      "question": "What is the minimum wage for private sector workers in the UAE?",
+      "answerable": true,
+      "expected_articles": [
+        {
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 27"
+        }
+      ],
+      "must_include": [
+        {
+          "fact": "States that the provided text does not set a figure; the Cabinet may issue a resolution to determine the minimum wage.",
+          "source_document": "Federal Decree-Law No. 33 of 2021",
+          "article": "Article 27",
+          "quote": "issue a resolution to determine the minimum wage for workers or any category thereof"
+        }
+      ],
+      "must_not_include": [
+        "Gives a specific AED minimum wage figure as if it were in the documents"
+      ],
+      "must_not_cite": [],
+      "notes": "Article 27 only delegates power; a correct answer says no amount is stated.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q073",
+      "category": "unanswerable",
+      "question": "How much does a residence visa for a domestic worker cost?",
+      "answerable": false,
+      "expected_articles": [],
+      "must_include": [
+        {
+          "fact": "States that the provided documents do not contain visa or residence fee amounts."
+        }
+      ],
+      "must_not_include": [
+        "Gives a specific visa fee amount"
+      ],
+      "must_not_cite": [],
+      "notes": "Fees are delegated to the Cabinet/Ministry (L9 Art 29) and not listed in the corpus.",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "Q074",
+      "category": "unanswerable",
+      "question": "What are the VAT or income tax rules for an employee's salary in the UAE?",
+      "answerable": false,
+      "expected_articles": [],
+      "must_include": [
+        {
+          "fact": "States that the provided documents do not cover taxation."
+        }
+      ],
+      "must_not_include": [
+        "Gives specific tax rates or rules"
+      ],
+      "must_not_cite": [],
+      "notes": "",
+      "provenance": {
+        "drafted_by": "LLM (Claude)",
+        "reviewed_by": null,
+        "review_status": "unreviewed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+[
+  {
+    "id": "Q001",
+    "question": "I am on probation and want to join another company in the UAE. How much notice should I give?",
+    "answer": "Under Federal Decree-Law No. 33 of 2021, Article 9(3), if you wish to move during the probationary period to work for another employer in the UAE, you must notify your original employer in writing **not less than one month** from the date of your wish to terminate the contract.\n\nSource: Federal Decree-Law No. 33 of 2021, Article 9 (Probationary Period), Clause 3.",
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 60"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 59"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 62"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ]
+    ],
+    "citations": {
+      "cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ]
+      ],
+      "expected_cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ]
+      ],
+      "citation_recall": 1.0,
+      "unexpected": [],
+      "wrong_law_flag": []
+    },
+    "retrieval": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  {
+    "id": "Q002",
+    "question": "What is the maximum probation period for a private sector employee?",
+    "answer": "The maximum probation period is **six (6) months from the date of commencement of work**. Under Article 9 of Federal Decree-Law No. 33 of 2021, the employer may appoint the worker under a probationary period not exceeding six months.\n\n**Source:** Federal Decree-Law No. 33 of 2021, Article 9 (Probationary Period).\n\n*(Note: Federal Decree-Law No. 9 of 2022, Article 8 sets the same six-month maximum, but that law governs domestic workers specifically.)*",
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 39"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 40"
+      ]
+    ],
+    "citations": {
+      "cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ],
+        [
+          "Federal Decree-Law No. 9 of 2022",
+          "Article 8"
+        ]
+      ],
+      "expected_cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ]
+      ],
+      "citation_recall": 1.0,
+      "unexpected": [
+        [
+          "Federal Decree-Law No. 9 of 2022",
+          "Article 8"
+        ]
+      ],
+      "wrong_law_flag": []
+    },
+    "retrieval": {
+      "hit": 1.0,
+      "rr": 0.3333333333333333,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  {
+    "id": "Q003",
+    "question": "Can my employer put me on probation a second time with the same company?",
+    "answer": "No. Under Federal Decree-Law No. 33 of 2021, Article 9(2), it is not permissible to appoint a worker under a probationary period more than once at the same employer. If the worker successfully passes the probationary period and continues to work, the contract becomes valid according to the agreed terms, and the probation period counts within the term of service.\n\nSource: Federal Decree-Law No. 33 of 2021, Article 9.",
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 64"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 49"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ]
+    ],
+    "citations": {
+      "cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ]
+      ],
+      "expected_cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ]
+      ],
+      "citation_recall": 1.0,
+      "unexpected": [],
+      "wrong_law_flag": []
+    },
+    "retrieval": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  {
+    "id": "Q004",
+    "question": "How much notice must an employer give to end a worker's employment during probation?",
+    "answer": "Under Federal Decree-Law No. 33 of 2021, Article 9(1), the employer may terminate a worker's employment during the probationary period after notifying the worker in writing at least fourteen (14) days before the date specified for termination of service.",
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 35"
+      ]
+    ],
+    "citations": {
+      "cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ]
+      ],
+      "expected_cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ]
+      ],
+      "citation_recall": 1.0,
+      "unexpected": [],
+      "wrong_law_flag": []
+    },
+    "retrieval": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  {
+    "id": "Q005",
+    "question": "I'm a foreign worker on probation and want to leave the UAE altogether. What notice do I give and what are the risks?",
+    "answer": "Under Federal Decree-Law No. 33 of 2021, Article 9(4), if you are a foreign worker on probation and wish to terminate the employment contract to leave the State, you must notify the employer in writing **not less than fourteen (14) days from the date specified for the termination of the contract**.\n\nRegarding risks, the same provision states that if you wish to return to the State and obtain a new work permit within **three (3) months from the date of departure**, the new employer must pay the compensation stipulated in Clause (3) of Article 9, unless you and the original employer agree otherwise. Additionally, Article 9(6) provides that if the foreign worker leaves the State without abiding by the provisions of Article 9, **he shall not be granted a work permit to work in the State for one year from the date of leaving the State**.\n\n(Source: Federal Decree-Law No. 33 of 2021, Article 9.)",
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 59"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 60"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 5"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ]
+    ],
+    "citations": {
+      "cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ]
+      ],
+      "expected_cited": [
+        [
+          "Federal Decree-Law No. 33 of 2021",
+          "Article 9"
+        ]
+      ],
+      "citation_recall": 1.0,
+      "unexpected": [],
+      "wrong_law_flag": []
+    },
+    "retrieval": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  }
+]

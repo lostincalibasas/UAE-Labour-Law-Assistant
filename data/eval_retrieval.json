@@ -1,0 +1,4986 @@
+{
+  "Q001": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 60"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 59"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 62"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q002": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 39"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 40"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 0.3333333333333333,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.3333333333333333,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.3333333333333333,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q003": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 64"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 49"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q004": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 35"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q005": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 59"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 60"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 5"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q006": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 35"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 42"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.25,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.25,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q007": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 18"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.2,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q008": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 34"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 47"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 33"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 44"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q009": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 35"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 42"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q010": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 35"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 8"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q011": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 35"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.16666666666666666
+    }
+  },
+  "Q012": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 50"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 18"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 35"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 47"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 49"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q013": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 32"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 32"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 28"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 8"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.3333333333333333,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.3333333333333333,
+      "recall": 1.0,
+      "precision": 0.2
+    }
+  },
+  "Q014": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 31"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 31"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 32"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 37"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q015": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 30"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 53"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 30"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 30"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 32"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 13"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q016": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 30"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 30"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 30"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 42"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 44"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q017": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 32"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 51"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 37"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 51"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q018": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 32"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 30"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 30"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 30"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 33"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q019": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 17"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 17"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 18"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 21"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 16"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 28"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q020": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 21"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 5"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 24"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 17"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 26"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 7"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q021": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 28"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 21"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 31"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 19"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q022": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 32"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 32"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 31"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 34"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.16666666666666666
+    }
+  },
+  "Q023": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 51"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 51"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 51"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 22"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 52"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 29"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 17"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 47"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 53"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q024": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 53"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 42"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q025": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 25"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 25"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 16"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 51"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 62"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 25"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 53"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 39"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q026": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 13"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 21"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 50"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 11"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 2"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 5"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 5"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 13"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q027": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 2"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@10": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    }
+  },
+  "Q028": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 13"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 2"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 50"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 12"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q029": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 16"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 18"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 49"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 42"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 35"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 16"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 53"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q030": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 44"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 44"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 44"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 50"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 15"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 34"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q031": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 47"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 47"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 44"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 44"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 44"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 18"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.16666666666666666
+    }
+  },
+  "Q032": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 47"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 47"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 37"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 62"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 39"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 17"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 25"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q033": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 46"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 31"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 31"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 35"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 15"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q034": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 42"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q035": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 42"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 48"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 65"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 43"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.25,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.25,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q036": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 5"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 2"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 16"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 16"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 5"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 4"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 17"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q037": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 53"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 2"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q038": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 13"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 23"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 13"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 23"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 55"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 13"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 23"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.25
+    }
+  },
+  "Q039": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 55"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 56"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 53"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 38"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q040": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 60"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 62"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 50"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 59"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 44"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 45"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q041": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 14"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@10": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    }
+  },
+  "Q042": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 17"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q043": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.16666666666666666,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q044": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 7"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 31"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 32"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q045": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 8"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q046": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 17"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 5"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.5,
+      "recall": 1.0,
+      "precision": 0.1111111111111111
+    }
+  },
+  "Q047": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 2"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 2"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q048": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 16"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 25"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 25"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.16666666666666666
+    }
+  },
+  "Q049": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 11"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 5"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 21"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.125
+    }
+  },
+  "Q050": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 53"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 17"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 9"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q051": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 22"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 51"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 51"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 51"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 52"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.16666666666666666
+    }
+  },
+  "Q052": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 18"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 23"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q053": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 18"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.16666666666666666
+    }
+  },
+  "Q054": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 18"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 14"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q055": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.6666666666666666
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    }
+  },
+  "Q056": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 7"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.6666666666666666
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.4
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    }
+  },
+  "Q057": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q058": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 21"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.4
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.4
+    }
+  },
+  "Q059": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q060": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 5"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q061": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 1"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2857142857142857
+    }
+  },
+  "Q062": {
+    "retrieved": [
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 2"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 5"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 2"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 5"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.6666666666666666
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    }
+  },
+  "Q063": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 5"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 0.25,
+      "recall": 0.5,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 0.25,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    }
+  },
+  "Q064": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 16"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 62"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 25"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.5
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.5
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2857142857142857
+    }
+  },
+  "Q065": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 16"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2857142857142857
+    }
+  },
+  "Q066": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 17"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 9"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 11"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.125
+    }
+  },
+  "Q067": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 3"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 11"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 3"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.3333333333333333
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q068": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 18"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 53"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 8"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 9"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@10": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    }
+  },
+  "Q069": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 13"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 23"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 23"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 13"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 23"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 18"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.6666666666666666
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2857142857142857
+    }
+  },
+  "Q070": {
+    "retrieved": [
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 9"
+      ],
+      [
+        "Cabinet Resolution No. 92 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 14"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 9"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 0.5,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.4
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2222222222222222
+    }
+  },
+  "Q071": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 12"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 19"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 11"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 4"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ]
+    ],
+    "@1": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    "@3": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.3333333333333333
+    },
+    "@5": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.25
+    },
+    "@10": {
+      "hit": 1.0,
+      "rr": 1.0,
+      "recall": 1.0,
+      "precision": 0.14285714285714285
+    }
+  },
+  "Q072": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 1"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 22"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 28"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 62"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 3"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 60"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 37"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 6"
+      ]
+    ],
+    "@1": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@3": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@5": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    "@10": {
+      "hit": 0.0,
+      "rr": 0.0,
+      "recall": 0.0,
+      "precision": 0.0
+    }
+  },
+  "Q073": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 11"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 5"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 10"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 27"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 20"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 3"
+      ],
+      [
+        "Cabinet Decision No. 106 of 2022",
+        "Article 20"
+      ]
+    ]
+  },
+  "Q074": {
+    "retrieved": [
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 22"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 15"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 62"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 59"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 6"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 37"
+      ],
+      [
+        "Federal Decree-Law No. 9 of 2022",
+        "Article 22"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 54"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 60"
+      ],
+      [
+        "Federal Decree-Law No. 33 of 2021",
+        "Article 63"
+      ]
+    ]
+  }
+}
