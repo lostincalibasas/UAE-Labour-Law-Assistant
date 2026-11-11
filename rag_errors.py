@@ -11,6 +11,10 @@ LOGGER = logging.getLogger("compliance_rag")
 
 # code: (user-facing action, whether trying again may help)
 ERRORS = {
+    "backend_configuration": ("Check RAG_API_BASE_URL: use an HTTP or HTTPS backend URL without credentials or query parameters.", False),
+    "backend_connection": ("Could not connect to the RAG backend. Start the API server and check RAG_API_BASE_URL.", True),
+    "backend_timeout": ("The RAG backend did not respond in time. The request may still be running; wait before trying again.", True),
+    "backend_response_invalid": ("The RAG backend returned an unusable response. Check that the frontend and API versions match.", False),
     "index_isolation": ("Index isolation refused this storage path or a previously initialized client. Start a fresh isolated verification process.", False),
     "configuration_missing": ("Set DEEPSEEK_API_KEY in the project's .env file or environment, then try again.", False),
     "configuration_invalid": ("Check DEEPSEEK_API_KEY: replace placeholder values and remove whitespace, then try again.", False),

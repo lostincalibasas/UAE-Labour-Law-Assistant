@@ -1,6 +1,6 @@
 # UAE Labour Law RAG Assistant
 
-**A document-grounded question-answering prototype for UAE labour law**, built with Python, Streamlit, ChromaDB, BGE embeddings, and DeepSeek.
+**A document-grounded question-answering prototype for UAE labour law**, built with Python, FastAPI, Streamlit, ChromaDB, BGE embeddings, and DeepSeek.
 
 The application retrieves relevant passages from a small collection of UAE labour-law documents and asks an LLM to answer from those passages, with document and article references. It is an educational/portfolio project, **not a legal-advice service**.
 
@@ -23,12 +23,14 @@ flowchart TD
     C --> D[252 indexed chunks]
     D --> E[BGE document embeddings]
     E --> F[(ChromaDB: compliance_bge)]
-    Q[User question] --> G[BGE query embedding]
+    Q[Streamlit user question] --> API[FastAPI POST /api/v1/ask]
+    API --> G[BGE query embedding]
     G --> F
     F --> H[Top-K retrieved passages and metadata]
     H --> I[Grounded DeepSeek answer generation]
-    Q --> I
-    I --> J[Streamlit answer and citations]
+    API --> I
+    I --> R[API response with evidence citations]
+    R --> J[Streamlit answer and citations]
 ```
 
 ### Corpus
@@ -51,6 +53,7 @@ The current extraction/chunking workflow produces **252 chunks**. Chunking uses 
 | Layer | Technology |
 | --- | --- |
 | Interface | Streamlit |
+| Backend | FastAPI + Uvicorn, shared Pydantic HTTP contracts |
 | Language | Python |
 | PDF extraction | pypdf |
 | Chunking | Article-aware processing + LangChain text splitters |
@@ -154,7 +157,7 @@ python build_vector_store_bge.py
 
 This creates `compliance_bge` using normalized BGE embeddings and cosine distance. If the collection already exists, the command leaves it unchanged. `--rebuild` deliberately replaces it; use that option only for an intentional rebuild after backing up the database.
 
-The app imports `retrieve_chunks` from `retrieve_bge.py`. A MiniLM index and an embedding comparison run are **not required** to launch it. `build_vector_store.py` remains the legacy MiniLM builder and replaces its own collection when run.
+The backend reuses `generate_answer.py` and its BGE retriever. Streamlit calls the backend over HTTP and does not import retrieval or generation. A MiniLM index and an embedding comparison run are **not required** to launch it. `build_vector_store.py` remains the legacy MiniLM builder and replaces its own collection when run. Existing installations should skip extraction and index building above.
 
 Optional: compare all three models in a fresh benchmark database:
 
@@ -168,9 +171,44 @@ MiniLM is rebuilt from the same chunks with its original unnormalized embeddings
 
 ### 6. Launch the app
 
+From the repository root, activate the virtual environment in each terminal.
+Close any process using the original index. Start the API in terminal one:
+
 ```powershell
+python -B -m backend --port 8000
+```
+
+This Windows launcher reuses Phase 3.5 write-denying locks, copies the complete
+index into a new temporary directory, verifies file hashes, and starts one
+Uvicorn worker with the Chroma path guard. Source locks remain held until that
+worker stops. No embeddings are rebuilt. The copy and shutdown integrity report
+are retained under the printed temporary workspace. The launcher refuses active
+writers, unsafe paths, unsupported locking platforms, or a changed copy.
+
+The backend binds only to `127.0.0.1`. Keep the parent terminal open; stop with
+Ctrl+C. Do not enable Uvicorn reload or multiple workers, which would bypass the
+guard initialization. Plain `uvicorn backend.main:app` exposes liveness/docs but
+intentionally returns unavailable for readiness and questions without the snapshot
+guard. Never set a backend index path to the original directory.
+
+Start Streamlit in terminal two:
+
+```powershell
+$env:RAG_API_BASE_URL = "http://127.0.0.1:8000"
 streamlit run app.py
 ```
+
+`RAG_API_BASE_URL` is read from the frontend process environment (default above),
+not from `.env`. The backend loads `DEEPSEEK_API_KEY` from the environment or root
+`.env` through the existing generation helper. Do not put keys in URLs.
+`RAG_INDEX_PATH` and `RAG_TEST_INDEX_ROOT` are set by the isolated launcher and
+must not be overridden. It also enables Hugging Face offline mode: BGE weights
+must already be cached. Installing a fresh environment does not install weights.
+
+The Streamlit HTTP client uses a 5-second connection timeout and 120-second
+read/write timeout, with no automatic retries, redirects, or environment proxies.
+A frontend timeout does not cancel work already running on the backend. The
+existing DeepSeek timeout and zero-retry policy remain unchanged.
 
 Example questions:
 
@@ -178,9 +216,60 @@ Example questions:
 - I am on probation and want to join another company in the UAE. How much notice should I give?
 - If I leave the UAE during probation, what notice is required?
 
+### HTTP API (Phase 6)
+
+| Endpoint | Response |
+| --- | --- |
+| `GET /health/live` | HTTP 200, `{"status":"alive"}`; no embeddings, index clients, or DeepSeek initialization |
+| `GET /health/ready` | HTTP 200 `ready` or 503 `unavailable`, `scope: "local_configuration"`, safe `error` or null |
+| `POST /api/v1/ask` | HTTP 200 for `ok` or `insufficient_evidence`; HTTP 503 for `operational_error`; HTTP 422 for invalid input |
+
+Readiness checks the isolated-path guard, dependency availability, copied database
+file readability and local API-key validation. It does not load BGE, open a Chroma
+client, query a collection, authenticate with DeepSeek, or send a paid request.
+It is a local preflight, **not** proof of upstream connectivity, available weights,
+collection completeness or index integrity. Ask requests handle those failures
+through the existing safe error catalog. Swagger UI is at
+`http://127.0.0.1:8000/docs`; submitting an Ask request there invokes DeepSeek.
+
+Request fields are `question` (strict nonblank string, at most 4,000 characters)
+and optional `top_k` (strict integer 1–50, default 10). Extra fields are rejected;
+callers cannot supply evidence or override citation validation.
+
+```json
+{"question":"How much notice must an employee give when resigning?","top_k":10}
+```
+
+The response uses exactly the structure in **Evidence-bound citation responses**
+below, including `sources`, exact citation excerpts, `citation_validation`,
+`claim_support` and safe error objects. Citation identity still does not establish
+legal correctness or semantic claim support. HTTP validation errors omit submitted
+values. Operational messages come only from the safe message catalog.
+
+Modules: `backend/main.py` creates the ASGI app; `routes.py` defines endpoints;
+`schemas.py` supplies shared contracts; `service.py` delegates to the existing
+pipeline. `backend_client.py` is the frontend's HTTP adapter. Calls are serialized
+inside this single-process prototype to protect lazy retriever initialization;
+health endpoints stay independent. Experimental regime selection remains disabled.
+There is no authentication, public deployment, Docker, reranking or hybrid search
+in this phase. Keep this development server on loopback.
+
+### Offline backend and regression tests
+
+```powershell
+python -B -m unittest discover -s tests -p test_backend.py -v
+python -B -m unittest discover -s tests -v
+python -B -m pip check
+```
+
+Tests use mocked generation, in-process HTTP transports and temporary index
+fixtures. They cover Streamlit → HTTP → FastAPI → pipeline integration without
+paid API calls or opening the protected original index. Readiness intentionally
+cannot prove live generation works; a live smoke test is a separate approved step.
+
 ## Evaluation commands
 
-Use the controlled 74-question evaluator described below. It opens only a byte-verified, write-locked snapshot copy; normal application startup is not an isolation workflow. The historical `evaluate.py` helper now refuses retrieval outside a guarded snapshot worker. Its old saved 20-question scores are historical metadata/citation-presence measurements, not answer correctness.
+Use the controlled 74-question evaluator described below. It opens only a byte-verified, write-locked snapshot copy. The Phase 6 backend launcher also uses snapshot isolation, but direct calls to older generation/retrieval helpers are not an isolation workflow. The historical `evaluate.py` helper refuses retrieval outside a guarded snapshot worker. Its old saved 20-question scores are historical metadata/citation-presence measurements, not answer correctness.
 
 All evaluation outputs use exclusive creation. Choose a new output filename for each run. The embedding comparison script still builds its own fresh isolated database; it is not part of Phase 4 and must not be run as an offline answer-quality check.
 
@@ -242,7 +331,7 @@ Retrieval checks for an existing `chroma.sqlite3` before opening storage, uses `
 
 The `compliance_rag` Python logger emits JSON warning events with only `event`, `stage`, `code`, and `retryable`. Application logs omit exception text, credentials, prompts, passages, provider bodies, and personal data. No log files or additional services are configured.
 
-Live API compatibility, latency, and answer quality are not established by mocked regression tests. Establish isolation with the command below before adding any live API smoke checks. Normal Streamlit launches still use the original index by default and must not be used as read-only verification commands.
+Live API compatibility, latency, and answer quality are not established by mocked regression tests. Establish isolation with the command below before adding any live API smoke checks. Streamlit now calls the isolated Phase 6 backend over HTTP; it never opens an index. Direct generation/retrieval scripts still default to the original index and must not be used as read-only verification commands.
 
 ## Safe index isolation and integrity verification (Windows)
 
