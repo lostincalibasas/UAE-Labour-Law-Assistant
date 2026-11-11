@@ -232,7 +232,7 @@ class IntegrationTests(unittest.TestCase):
         st = MagicMock()
         st.text_input.return_value = 'Question?'
         st.button.return_value = True
-        with patch.dict(sys.modules, {'streamlit': st, 'generate_answer': NS(generate_answer=Mock(return_value=response))}), \
+        with patch.dict(sys.modules, {'streamlit': st, 'backend_client': NS(ask_backend=Mock(return_value=response))}), \
              patch.dict(os.environ):
             runpy.run_path(str(ROOT / 'app.py'), run_name='_phase2_app')
         return st

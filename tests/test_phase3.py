@@ -290,7 +290,7 @@ class UIAndEvaluationTests(unittest.TestCase):
         st.button.return_value = clicked
         st.text_input.return_value = 'test'
         generate = Mock(return_value=result, side_effect=error)
-        with patch.dict(sys.modules, {'streamlit': st, 'generate_answer': NS(generate_answer=generate)}), \
+        with patch.dict(sys.modules, {'streamlit': st, 'backend_client': NS(ask_backend=generate)}), \
              patch.dict(os.environ):
             runpy.run_path(str(ROOT / 'app.py'), run_name='_phase3_app')
         return st, generate

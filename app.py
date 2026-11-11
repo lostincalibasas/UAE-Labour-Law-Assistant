@@ -1,5 +1,5 @@
 import streamlit as st
-from generate_answer import generate_answer
+from backend_client import ask_backend
 from evidence_citations import FALLBACK
 from rag_errors import RAGError, operational_failure
 
@@ -44,7 +44,7 @@ if st.button("Ask"):
         try:
             with st.spinner("Searching documents and generating answer..."):
                 try:
-                    result = generate_answer(query)
+                    result = ask_backend(query)
                 except Exception:
                     result = operational_failure(RAGError("internal_error", "ui"))
             display_result(result)
