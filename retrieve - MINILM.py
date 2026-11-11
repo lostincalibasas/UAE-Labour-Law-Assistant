@@ -1,11 +1,12 @@
 import chromadb
 from sentence_transformers import SentenceTransformer
+from index_paths import resolve_index_path
 
-DB_PATH = "data/chroma_db"
+DB_PATH = str(resolve_index_path())
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 client = chromadb.PersistentClient(path=DB_PATH)
-collection = client.get_or_create_collection(name="compliance_docs")
+collection = client.get_collection(name="compliance_docs")
 
 def retrieve_chunks(query, top_k=10):
     query_embedding = model.encode([query]).tolist()

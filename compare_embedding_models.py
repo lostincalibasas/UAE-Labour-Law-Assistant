@@ -4,33 +4,34 @@ Run from the project directory:
     python compare_embedding_models.py --limit 3
     python compare_embedding_models.py
 
-Only two NEW collections are created or updated. Existing 'compliance_docs'
-(MiniLM) is read-only in this script; Streamlit is not modified.
+All three models are indexed in a new benchmark database. The active database
+is never opened. Existing database directories and result files are refused.
 """
 
 import argparse
 import json
 import time
 from pathlib import Path
+from uuid import uuid4
 
-import chromadb
-from sentence_transformers import SentenceTransformer
+from artifact_io import require_new_output, write_new_json
 
-CHUNKS_FILE = Path('data/chunks.json')
-EVAL_FILE = Path('rag_evaluation_20_questions.json')
-DB_PATH = 'data/chroma_db'
-OUTPUT_FILE = Path('embedding_comparison_results.json')
+BASE_DIR = Path(__file__).resolve().parent
+CHUNKS_FILE = BASE_DIR / 'data' / 'chunks.json'
+EVAL_FILE = BASE_DIR / 'rag_evaluation_20_questions.json'
+DB_PATH = BASE_DIR / 'data' / 'chroma_db'
+OUTPUT_FILE = BASE_DIR / 'embedding_comparison_results.json'
 
-BASELINE_COLLECTION = 'compliance_docs'
+BASELINE_COLLECTION = 'benchmark_minilm'
 CANDIDATES = {
     'MPNet': {
         'model': 'sentence-transformers/all-mpnet-base-v2',
-        'collection': 'compliance_mpnet',
+        'collection': 'benchmark_mpnet',
         'query_prefix': '',
     },
     'BGE': {
         'model': 'BAAI/bge-base-en-v1.5',
-        'collection': 'compliance_bge',
+        'collection': 'benchmark_bge',
         # BGE's retrieval-specific query instruction; passages are unprefixed.
         'query_prefix': 'Represent this sentence for searching relevant passages: ',
     },
@@ -55,14 +56,11 @@ def validate_chunks(chunks):
     return ids
 
 
-def rebuild_candidate_collection(client, name, chunks, ids, embeddings):
-    # Generate and validate the embeddings BEFORE replacing a test collection.
+def create_candidate_collection(client, name, chunks, ids, embeddings, space='cosine'):
+    # create_collection refuses collisions; never delete or reuse a collection.
     if len(embeddings) != len(chunks):
         raise ValueError('Embeddings/chunks length mismatch')
-    existing = [c.name if hasattr(c, 'name') else c for c in client.list_collections()]
-    if name in existing:
-        client.delete_collection(name)
-    collection = client.create_collection(name=name, metadata={'hnsw:space': 'cosine'})
+    collection = client.create_collection(name=name, metadata={'hnsw:space': space})
     collection.add(
         ids=ids,
         embeddings=embeddings,
@@ -77,6 +75,16 @@ def rebuild_candidate_collection(client, name, chunks, ids, embeddings):
     if collection.count() != len(chunks):
         raise RuntimeError(f'{name}: expected {len(chunks)} records, got {collection.count()}')
     return collection
+
+
+def prepare_benchmark_directory(path):
+    path = Path(path).resolve()
+    active = Path(DB_PATH).resolve()
+    if path == active or active in path.parents or path in active.parents:
+        raise ValueError('Benchmark database must be separate from the active database.')
+    # A fresh directory prevents collisions with any previous benchmark or index.
+    path.mkdir(parents=True, exist_ok=False)
+    return path
 
 
 def search(collection, embedding, top_k):
@@ -142,11 +150,20 @@ def main():
     parser = argparse.ArgumentParser(description='Compare MiniLM vs MPNet and BGE on legal chunk retrieval.')
     parser.add_argument('--limit', type=int, default=None, help='Use the first N evaluation questions')
     parser.add_argument('--top-k', type=int, default=10, help='Number of retrieved chunks (default 10)')
+    parser.add_argument('--output', type=Path, default=OUTPUT_FILE,
+                        help='New results file; existing files are never overwritten')
+    parser.add_argument('--db-path', type=Path,
+                        default=BASE_DIR / 'data' / 'benchmarks' / uuid4().hex,
+                        help='New isolated database directory (default: unique data/benchmarks directory)')
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
         parser.error('--limit must be positive')
     if args.top_k < 10:
         parser.error('--top-k must be >= 10 to report Hit@10')
+    try:
+        require_new_output(args.output)
+    except FileExistsError as exc:
+        parser.error(str(exc))
 
     chunks = load_json(CHUNKS_FILE)
     ids = validate_chunks(chunks)
@@ -156,19 +173,27 @@ def main():
     if not questions:
         raise ValueError('No evaluation questions')
 
-    client = chromadb.PersistentClient(path=DB_PATH)
-    baseline = client.get_collection(BASELINE_COLLECTION)
-    if baseline.count() != len(chunks):
-        raise ValueError(
-            f'Baseline has {baseline.count()} records, but chunks.json has {len(chunks)}. '
-            'Check that you are using the corresponding dataset before comparing.'
-        )
-    print(f'Loaded {len(chunks)} chunks, {len(questions)} questions.')
-    print('Existing MiniLM collection will NOT be modified.\n')
+    try:
+        benchmark_path = prepare_benchmark_directory(args.db_path)
+    except (FileExistsError, ValueError) as exc:
+        parser.error(str(exc))
+    import chromadb
+    from sentence_transformers import SentenceTransformer
 
-    # First evaluate MiniLM, without replacing/rebuilding its current collection.
-    print('=== MiniLM (existing baseline) ===')
+    client = chromadb.PersistentClient(path=str(benchmark_path))
+    print(f'Loaded {len(chunks)} chunks, {len(questions)} questions.')
+    print(f'Isolated benchmark database: {benchmark_path}\n')
+
+    # Match the original MiniLM builder: unnormalized embeddings, L2 distance.
+    print('=== MiniLM (isolated baseline) ===')
     baseline_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+    baseline_embeddings = baseline_model.encode(
+        [chunk['text'] for chunk in chunks], show_progress_bar=True,
+        normalize_embeddings=False,
+    ).tolist()
+    baseline = create_candidate_collection(
+        client, BASELINE_COLLECTION, chunks, ids, baseline_embeddings, space='l2',
+    )
     results = {'MiniLM': evaluate_model('MiniLM', baseline_model, baseline, questions, args.top_k, normalize_query=False)}
     del baseline_model
 
@@ -181,7 +206,7 @@ def main():
         embeddings = model.encode(texts, batch_size=32, show_progress_bar=True,
                                   normalize_embeddings=True).tolist()
         build_time = round(time.perf_counter() - started, 2)
-        collection = rebuild_candidate_collection(client, config['collection'], chunks, ids, embeddings)
+        collection = create_candidate_collection(client, config['collection'], chunks, ids, embeddings)
         print(f'Built {collection.name} with {collection.count()} chunks in {build_time}s')
         result = evaluate_model(label, model, collection, questions, args.top_k,
                                 prefix=config['query_prefix'])
@@ -196,15 +221,17 @@ def main():
         print(f'{label:<12} {m["hit_at_1"]:>8.1%} {m["hit_at_5"]:>8.1%} '
               f'{m["hit_at_10"]:>8.1%} {m["mrr_at_10"]:>8.3f}')
 
-    OUTPUT_FILE.write_text(json.dumps({
+    write_new_json(args.output, {
         'total_questions': len(questions),
         'chunks': len(chunks),
         'top_k': args.top_k,
+        'benchmark_db_path': str(benchmark_path),
+        'baseline': 'MiniLM rebuilt in isolation using unnormalized embeddings and L2 distance',
         'note': 'Metrics are retrieval-only. OOS questions are not graded without a relevance gate. Do not compare raw distances across indexes.',
         'results': results,
-    }, ensure_ascii=False, indent=2), encoding='utf-8')
-    print(f'\nSaved: {OUTPUT_FILE}')
-    print('No changes were made to compliance_docs, generate_answer.py, or app.py.')
+    })
+    print(f'\nSaved: {args.output}')
+    print('The active ChromaDB database was not opened or modified.')
 
 
 if __name__ == '__main__':

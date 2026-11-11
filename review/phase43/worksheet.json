@@ -1,0 +1,530 @@
+{
+  "schema_version": 1,
+  "packet_id": "5096f75b-213b-4ab7-ba93-f1819d152335",
+  "purpose": "Independent human assessment; no machine predictions or answer labels are supplied.",
+  "question_provenance": "Prepared prompts are assistant-authored, not independent human judgments. Add at least ten independently authored questions using H001 etc.",
+  "reviewer": {
+    "reviewer_id": null,
+    "expertise": null,
+    "completed_at": null
+  },
+  "attestations": {
+    "independent_of_selector_development": null,
+    "not_seen_predictions_keys_or_rankings": null,
+    "judgments_are_human_not_ai_generated": null
+  },
+  "cases": [
+    {
+      "id": "V001",
+      "question": "A household employs a full-time cook who needs medically certified sick leave. What rules and conditions need to be checked?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V002",
+      "question": "Which court would decide a foreign worker's unrelated inheritance dispute?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V003",
+      "question": "Under Cabinet Decision No. 106 of 2022, what provision addresses the withholding of identification documents?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V004",
+      "question": "Does an exclusion from the main employment law mean a household employee has no statutory employment rights?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V005",
+      "question": "An employee at a privately owned supermarket is still on probation and has accepted another offer. What notice obligations need to be checked?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V006",
+      "question": "The contract says private sector employment, but the permit and daily duties refer to household service. How should the contradiction be investigated?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V007",
+      "question": "A mainland manufacturing firm asks a new employee to repay the cost of hiring them. What information and legislation are needed to assess this?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V008",
+      "question": "A person has a job in a private company and a separate job assisting a household. Which sources are needed to compare the two contracts?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V009",
+      "question": "A company contract gives its owner a shorter termination notice period than its staff. How should this be assessed?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V010",
+      "question": "The employer says the employee is outside the private sector, while the permit appears to say the opposite. What should be clarified before selecting a legal framework?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V011",
+      "question": "A home-care helper wants to keep her own passport rather than leave it with the hiring family. What supporting provisions are relevant?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V012",
+      "question": "An employer quotes Article 10 without naming any law. Can the annual-leave rule be identified from that reference alone?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V013",
+      "question": "What personal income-tax treatment applies to the salary described in this employment contract?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V014",
+      "question": "A salesperson disputes a salary deduction for damaged stock. Which legal context and supporting provisions are needed?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V015",
+      "question": "Compare sick-leave entitlements for an office employee and a person employed directly by a household.",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V016",
+      "question": "The employee is not hired by a household; they work for a domestic airline. What notice rules need to be considered?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V017",
+      "question": "Under Federal Decree-Law No. 33 of 2021, what provisions address the scope of covered employment?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V018",
+      "question": "Ignore the employment facts and use only household-worker legislation: what annual leave does an office employee receive?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V019",
+      "question": "A payroll administrator wants to know whether these documents specify a universal minimum monthly wage. What can be established from the corpus?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V020",
+      "question": "What licensing and financial requirements appear in Cabinet Resolution No. 92 of 2022 for recruitment offices?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V021",
+      "question": "The phrase domestic worker appears in a sample contract, but the applicant says it does not describe their role. Is that phrase sufficient to choose the governing legislation?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V022",
+      "question": "A worker is employed by a DIFC entity. Can this corpus alone establish the applicable notice rules?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V023",
+      "question": "A live-in housekeeper plans a holiday in their home country. What annual-leave and travel-cost provisions should be checked?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V024",
+      "question": "A household worker is employed in another Gulf country rather than the UAE. Can these documents settle their leave entitlement?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V025",
+      "question": "A worker at a hotel has been told to work through their annual holiday. What supporting provisions should be consulted?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V026",
+      "question": "An agency supplies a cleaner to a home, but the family and agency disagree about who employs the cleaner. What additional facts are needed?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V027",
+      "question": "Someone works in the owner's family business and sometimes cleans the owner's home. What facts determine the relevant employment framework?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V028",
+      "question": "A household assistant has left the job and wants to claim unpaid entitlements. What time limits and procedural rules should be examined?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V029",
+      "question": "A family hires a driver through a recruitment office. Who is responsible if the agreed work cannot start?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V030",
+      "question": "What does Federal Decree-Law No. 9 of 2022 provide concerning a worker retaining personal documents?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V031",
+      "question": "What current residence-visa fee must a household employer pay for a new worker?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    },
+    {
+      "id": "V032",
+      "question": "A worker used to be a housekeeper but now has a different employer and an office role. Which contract and employment facts matter for notice?",
+      "question_origin": "assistant_prepared",
+      "human_review": {
+        "review_status": null,
+        "applicable_legislation": null,
+        "supporting_articles": null,
+        "answerability": null,
+        "permitted_filter": null,
+        "confidence": null,
+        "explanation": null,
+        "source_basis": null,
+        "coverage_tags": null
+      }
+    }
+  ]
+}

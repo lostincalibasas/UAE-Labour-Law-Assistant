@@ -3,11 +3,13 @@
 Commands (run from the compliance-rag project root, next to data/chunks.json):
 
   python eval_answers.py verify-set                 # check every quote exists in chunks.json under its article
-  python eval_answers.py retrieval --k 1 3 5 10     # retrieval metrics only (no LLM calls)
-  python eval_answers.py answers --k 10             # retrieval + generation + citation + judge
+  python eval_answers.py retrieval --ids all --output runs/new.json  # isolated, no APIs
+  python eval_answers.py answers --ids Q001 --dry-run --output runs/plan.json
   python eval_answers.py audit --n 25               # hand-check judge verdicts, get agreement rate
 
 Needs for `answers`:
+  Explicit nonzero generation/judge budgets to authorize request attempts;
+  defaults are zero. All retrieval CLI commands use Phase 3.5 snapshot workers.
   1. PIPELINE_MODULE below set to the file that holds your generate_answer(query, top_k).
   2. A judge model, ideally NOT the generator:
        JUDGE_API_KEY, JUDGE_BASE_URL (optional), JUDGE_MODEL   (any OpenAI-compatible API)
@@ -19,6 +21,9 @@ import random
 import re
 from collections import defaultdict
 from pathlib import Path
+
+from artifact_io import require_new_output, write_new_json
+from rag_errors import RAGError, operational_failure
 
 BASE = Path(__file__).resolve().parent
 EVAL_SET = BASE / "data" / "eval_set.json"
@@ -126,7 +131,7 @@ def aggregate(rows):
 
 
 def run_retrieval(questions, ks):
-    from retrieve_bge import retrieve_chunks  # your existing retriever
+    from evaluate import retrieve_chunks  # Enforces guarded snapshot execution.
     maxk = max(ks)
     per_q, by_k = {}, {k: [] for k in ks}
     for q in questions:
@@ -145,6 +150,9 @@ def print_retrieval(by_k):
     print("\nRETRIEVAL (article level; Hit=Hit Rate, MRR, Recall, Precision)")
     print(f"{'K':>3} {'Hit':>7} {'MRR':>7} {'Recall':>7} {'Prec':>7}   n")
     for k, items in by_k.items():
+        if not items:
+            print(f"{k:>3}   N/A (no successful retrievals to score)")
+            continue
         a = aggregate([m for _, m in items])
         print(f"{k:>3} {a['hit']:7.2f} {a['rr']:7.2f} {a['recall']:7.2f} {a['precision']:7.2f}   {len(items)}")
     k = max(by_k)
@@ -178,11 +186,14 @@ def extract_citations(answer):
     return cited
 
 
-def citation_check(answer, q):
-    cited = extract_citations(answer)
+def citation_check(answer, q, verified_citations=None):
+    # Legacy law/article text is inspectable, but never counted as verified.
+    cited = {(c["source_document"], c.get("article") or "") for c in (verified_citations or [])}
     exp = {key(a) for a in q["expected_articles"]}
     bad = {key(a) for a in q.get("must_not_cite", [])}
     return {
+        "verification": "evidence_ids" if verified_citations is not None else "legacy_unverified",
+        "legacy_candidates": sorted(extract_citations(answer)) if verified_citations is None else [],
         "cited": sorted(cited),
         "expected_cited": sorted(cited & exp),
         "citation_recall": len(cited & exp) / len(exp) if exp else None,
@@ -196,146 +207,163 @@ def citation_check(answer, q):
 PIPELINE_MODULE = "generate_answer"
 
 
-def generate_answer(question, k):
-    """Calls YOUR pipeline function: generate_answer(query, top_k) -> {"answer": str, "sources": [...]}."""
+def generate_answer(question, k, include_evidence=False, *, evidence=None, before_request=None):
+    """Keep the text-only helper compatible; evaluation requests full evidence."""
     import importlib
     mod = importlib.import_module(PIPELINE_MODULE)
-    return mod.generate_answer(question, top_k=k)["answer"]
+    kwargs = {} if evidence is None else {"evidence": evidence}
+    if before_request is not None:
+        kwargs["before_request"] = before_request
+    result = mod.generate_answer(question, top_k=k, **kwargs)
+    return result if include_evidence else result["answer"]
 
 
 # ------------------------------------------------------------------ judge
-JUDGE_PROMPT = """You are grading an answer from a legal RAG assistant. Be strict and literal.
-
-QUESTION:
-{question}
-
-ANSWER UNDER TEST:
-{answer}
-
-REQUIRED FACTS (each backed by a source quote; judge the ANSWER against the fact, using the quote only as reference):
-{facts}
-
-FORBIDDEN CLAIMS (an item is "triggered" only if the answer asserts it as the answer):
-{avoid}
-
-RETRIEVED CONTEXT GIVEN TO THE ANSWERER:
-{context}
-
-For every required fact return one verdict:
-  "present"      - answer states it correctly (numbers, conditions, who/when must match)
-  "missing"      - not stated
-  "contradicted" - stated with a different number/condition/applicability
-Also list "unsupported_claims": specific legal claims in the answer that are NOT supported by the retrieved context.
-Return ONLY JSON:
-{{"facts":[{{"id":0,"verdict":"present|missing|contradicted","evidence":"short"}}],
- "forbidden":[{{"id":0,"triggered":false,"evidence":"short"}}],
- "unsupported_claims":["..."]}}"""
+from eval_judge import JUDGE_PROMPT, evaluate as evaluate_judgment
 
 
-def call_judge(prompt):
+def call_judge(prompt, before_request=None):
     from openai import OpenAI
-    client = OpenAI(api_key=os.environ["JUDGE_API_KEY"], base_url=os.environ.get("JUDGE_BASE_URL"))
-    resp = client.chat.completions.create(
-        model=os.environ["JUDGE_MODEL"], temperature=0,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = resp.choices[0].message.content
-    m = re.search(r"\{.*\}", text, re.S)
-    return json.loads(m.group(0))
+    from generate_answer import completed_answer
+    with OpenAI(api_key=os.environ["JUDGE_API_KEY"], base_url=os.environ.get("JUDGE_BASE_URL"),
+                timeout=30.0, max_retries=0) as client:
+        if before_request is not None:
+            before_request()
+        resp = client.chat.completions.create(
+            model=os.environ["JUDGE_MODEL"], temperature=0,
+            messages=[{"role": "user", "content": prompt}],
+        )
+    from eval_judge import parse_response
+    return parse_response(completed_answer(resp))
 
 
-def judge_answer(q, answer, chunks):
-    facts = "\n".join(
-        f"[{i}] {f['fact']}" + (f"\n    source ({f['article']}): \"{f['quote']}\"" if f.get("quote") else "")
-        for i, f in enumerate(q["must_include"]))
-    avoid = "\n".join(f"[{i}] {a}" for i, a in enumerate(q["must_not_include"])) or "(none)"
-    context = "\n---\n".join(c["text"][:1500] for c in chunks) or "(none)"
-    res = call_judge(JUDGE_PROMPT.format(question=q["question"], answer=answer, facts=facts, avoid=avoid, context=context))
-    verdicts = [f["verdict"] for f in res.get("facts", [])]
-    n = len(q["must_include"])
-    present = sum(v == "present" for v in verdicts)
-    contradicted = sum(v == "contradicted" for v in verdicts)
-    triggered = sum(bool(t.get("triggered")) for t in res.get("forbidden", []))
-    res["scores"] = {
-        "fact_coverage": present / n if n else None,
-        "contradicted": contradicted,
-        "forbidden_triggered": triggered,
-        "unsupported_claims": len(res.get("unsupported_claims", [])),
-        "pass": present == n and contradicted == 0 and triggered == 0,
-    }
-    return res
+def judge_answer(q, answer, chunks, *, before_request=None):
+    caller = call_judge if before_request is None else lambda prompt: call_judge(prompt, before_request)
+    return evaluate_judgment(q, answer, chunks, caller)
 
 
 # ------------------------------------------------------------------ answers command
 def cmd_answers(args):
-    from retrieve_bge import retrieve_chunks
+    output = require_new_output(args.output)
+    from evaluate import retrieve_chunks
     questions = load_eval_set()
     if args.limit:
         questions = questions[: args.limit]
     results, ret_rows = [], {args.k: []}
     for q in questions:
-        chunks = retrieve_chunks(q["question"], top_k=args.k)
-        answer = generate_answer(q["question"], args.k)
+        retrieval_failed = False
+        try:
+            chunks = retrieve_chunks(q["question"], top_k=args.k)
+        except Exception as exc:
+            chunks = []
+            retrieval_failed = True
+            generated = operational_failure(exc if isinstance(exc, RAGError) else RAGError("retrieval_unavailable", "retrieval"))
+        if not retrieval_failed:
+            try:
+                from evidence_citations import build_evidence
+                generated = generate_answer(q["question"], args.k, include_evidence=True, evidence=build_evidence(chunks))
+            except Exception as exc:
+                generated = operational_failure(exc if isinstance(exc, RAGError) else RAGError("internal_error", "evaluation"))
+        if isinstance(generated, dict):
+            answer = generated["answer"]
+            validation = generated.get("citation_validation") or {"status": "legacy_unverified"}
+            citations = generated.get("citations", []) if validation["status"] == "valid" else []
+            citation_result = citation_check(answer, q, citations)
+            citation_result["verification"] = validation["status"]
+        else:
+            answer = generated
+            validation = {"status": "legacy_unverified"}
+            citations = []
+            citation_result = citation_check(answer, q)
         row = {"id": q["id"], "question": q["question"], "answer": answer,
                "retrieved": [(c["source_document"], c["article"]) for c in chunks],
-               "citations": citation_check(answer, q)}
-        if q["expected_articles"]:
+               "citations": citation_result,
+               "evidence_citations": citations,
+               "citation_validation": validation,
+               "claim_support": "not_evaluated",
+               "status": generated.get("status") if isinstance(generated, dict) else None,
+               "error": generated.get("error") if isinstance(generated, dict) else None}
+        if q["expected_articles"] and not retrieval_failed:
             row["retrieval"] = retrieval_metrics(chunks, q["expected_articles"], args.k)
             ret_rows[args.k].append((q, row["retrieval"]))
-        if not args.no_judge:
+        if not args.no_judge and row["status"] != "operational_error":
             row["judge"] = judge_answer(q, answer, chunks)
         results.append(row)
-        flag = "PASS" if row.get("judge", {}).get("scores", {}).get("pass") else "----"
+        flag = "ERROR" if row["error"] else ("PASS" if row.get("judge", {}).get("scores", {}).get("pass") else "----")
         print(f"{q['id']} {flag}  cited={len(row['citations']['cited'])}  wrong_law={row['citations']['wrong_law_flag']}")
-    RESULTS.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_new_json(output, results)
     print_retrieval(ret_rows)
     cit = [r["citations"]["citation_recall"] for r in results if r["citations"]["citation_recall"] is not None]
-    print(f"\nCITATION presence recall: {sum(cit)/len(cit):.2f}   wrong-law flags: "
+    citation_score = f"{sum(cit)/len(cit):.2f}" if cit else "N/A"
+    print(f"\nCITATION presence recall: {citation_score}   wrong-law flags: "
           f"{sum(bool(r['citations']['wrong_law_flag']) for r in results)}")
-    judged = [r["judge"]["scores"] for r in results if "judge" in r]
+    print(f"Operational failures: {sum(r['status'] == 'operational_error' for r in results)}")
+    judged = [r["judge"]["scores"] for r in results if r.get("judge", {}).get("status") == "valid"]
     if judged:
         print(f"ANSWER pass rate: {sum(s['pass'] for s in judged)/len(judged):.2f}   "
               f"mean fact coverage: {sum(s['fact_coverage'] for s in judged)/len(judged):.2f}   "
               f"contradictions: {sum(s['contradicted'] for s in judged)}   "
               f"traps triggered: {sum(s['forbidden_triggered'] for s in judged)}")
         print("Reminder: LLM-drafted key + LLM judge. Run `audit` and read failures before trusting these numbers.")
-    print(f"Saved {RESULTS}")
+    print(f"Saved {output}")
 
 
 def cmd_retrieval(args):
+    output = require_new_output(args.output)
     per_q, by_k = run_retrieval(load_eval_set(), args.k)
     print_retrieval(by_k)
-    (BASE / "data" / "eval_retrieval.json").write_text(json.dumps(per_q, indent=2), encoding="utf-8")
+    write_new_json(output, per_q)
+    print(f"Saved {output}")
 
 
 # ------------------------------------------------------------------ audit
 def cmd_audit(args):
-    results = json.loads(RESULTS.read_text(encoding="utf-8"))
+    output = require_new_output(args.output)
+    results = json.loads(args.input.read_text(encoding="utf-8"))
+    if isinstance(results, dict):
+        results = results["rows"]
+    judged = [r for r in results if isinstance(r.get("judge"), dict)
+              and isinstance(r["judge"].get("scores"), dict)
+              and "pass" in r["judge"]["scores"]
+              and r["judge"].get("status", "valid") == "valid"]
+    if not judged:
+        print("No judged results available to audit. No audit file written.")
+        return
     qs = {q["id"]: q for q in load_eval_set()}
-    sample = random.Random(args.seed).sample([r for r in results if "judge" in r], min(args.n, len(results)))
+    sample = random.Random(args.seed).sample(judged, min(args.n, len(judged)))
     agree = total = 0
     log = []
     for r in sample:
         q = qs[r["id"]]
-        print("\n" + "=" * 78 + f"\n{r['id']}  {q['question']}\n\nANSWER:\n{r['answer']}\n")
+        answer = r.get('answer', r.get('response', {}).get('answer', ''))
+        print("\n" + "=" * 78 + f"\n{r['id']}  {q['question']}\n\nANSWER:\n{answer}\n")
         for i, f in enumerate(q["must_include"]):
-            v = r["judge"]["facts"][i]["verdict"] if i < len(r["judge"].get("facts", [])) else "?"
+            v = next((f['verdict'] for f in r['judge'].get('facts', []) if f.get('id') == i), '?')
             print(f"  judge={v:12s} fact: {f['fact']}")
             if f.get("quote"):
                 print(f"                 source: \"{f['quote']}\"")
+        for passage in r.get('evidence', []):
+            print(f"[{passage['evidence_id']}] {passage['source_document']} | {passage['article']}\n{passage['text']}")
+        for claim in r['judge'].get('claims', []):
+            print(json.dumps(claim, ensure_ascii=False))
         print(f"  judge overall PASS={r['judge']['scores']['pass']}")
         ans = input("Do YOU agree with the judge's overall verdict? [y/n/skip] ").strip().lower()
         if ans in ("y", "n"):
             total += 1
             agree += ans == "y"
-            log.append({"id": r["id"], "judge_pass": r["judge"]["scores"]["pass"], "human_agrees": ans == "y"})
-    AUDIT.write_text(json.dumps(log, indent=2), encoding="utf-8")
+            log.append({"id": r["id"], "judge_pass": r["judge"]["scores"]["pass"], "human_agrees": ans == "y",
+                        "manual_verdict": "pass" if (r["judge"]["scores"]["pass"] == (ans == "y")) else "fail"})
+    write_new_json(output, log)
     if total:
         print(f"\nJudge/human agreement: {agree}/{total} = {agree/total:.0%}. "
               "Below ~85%: tighten the judge prompt before trusting scores.")
 
 
 def main():
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] in {"retrieval", "answers", "report"}:
+        from phase4_eval import main as controlled_main
+        return controlled_main(sys.argv[1:])
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("verify-set").set_defaults(fn=cmd_verify)
@@ -343,8 +371,17 @@ def main():
     a = sub.add_parser("answers"); a.add_argument("--k", type=int, default=10); a.add_argument("--limit", type=int)
     a.add_argument("--no-judge", action="store_true"); a.set_defaults(fn=cmd_answers)
     u = sub.add_parser("audit"); u.add_argument("--n", type=int, default=25); u.add_argument("--seed", type=int, default=0); u.set_defaults(fn=cmd_audit)
+    r.add_argument("--output", type=Path, default=BASE / "data" / "eval_retrieval.json")
+    a.add_argument("--output", type=Path, default=RESULTS)
+    u.add_argument("--input", type=Path, default=RESULTS, help="Answer results to audit")
+    u.add_argument("--output", type=Path, default=AUDIT)
     args = p.parse_args()
-    args.fn(args)
+    if args.cmd == "audit" and args.n < 1:
+        p.error("--n must be positive")
+    try:
+        args.fn(args)
+    except FileExistsError as exc:
+        p.error(str(exc))
 
 
 if __name__ == "__main__":

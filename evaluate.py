@@ -6,8 +6,8 @@ Run from the project directory:
     python evaluate.py --retrieval-only
     python evaluate.py --limit 3 --verbose
 
-This script does not modify ChromaDB or the RAG pipeline.
-It makes one LLM call per question unless --retrieval-only is used.
+Historical evaluator. Retrieval now refuses execution outside a guarded snapshot
+worker. Use eval_answers.py for controlled Phase 4 evaluations and request budgets.
 """
 
 import argparse
@@ -16,7 +16,8 @@ import io
 import json
 from pathlib import Path
 
-from retrieve_bge import retrieve_chunks
+from artifact_io import require_new_output, write_new_json
+from rag_errors import RAGError, operational_failure
 
 FALLBACK = (
     "I don't have enough information in the available documents "
@@ -24,6 +25,14 @@ FALLBACK = (
 )
 TOP_K = 10
 BASE_DIR = Path(__file__).resolve().parent
+
+
+def retrieve_chunks(query, top_k=TOP_K):
+    # Output checks and --help must not initialize the model or live database.
+    from index_isolation import require_isolated_index
+    require_isolated_index()
+    from retrieve_bge import retrieve_chunks as retrieve
+    return retrieve(query, top_k=top_k)
 
 
 def metric(passed, total):
@@ -53,12 +62,16 @@ def evaluate_case(case, generate_answer=None, verbose=False):
         "retrieved_chunks": [],
         "answer": None,
         "sources": [],
+        "citations": [],
+        "citation_validation": None,
+        "claim_support": "not_evaluated",
         "citation_hit": None,
         "fallback_pass": None,
         "answer_correct": None,
         "citation_correct": None,
         "notes": "",
         "error": None,
+        "status": None,
     }
 
     try:
@@ -82,7 +95,9 @@ def evaluate_case(case, generate_answer=None, verbose=False):
             result["retrieval_rank"] = ranks[0] if ranks else None
 
     except Exception as exc:
-        result["error"] = f"Retrieval: {type(exc).__name__}: {exc}"
+        failure = operational_failure(exc if isinstance(exc, RAGError) else RAGError("retrieval_unavailable", "retrieval"))
+        result["error"] = failure["error"]
+        result["status"] = failure["status"]
         return result
 
     if generate_answer is None:
@@ -100,16 +115,30 @@ def evaluate_case(case, generate_answer=None, verbose=False):
         sources = generated.get("sources") or []
         result["answer"] = answer
         result["sources"] = sources
+        validation = generated.get("citation_validation") or {"status": "legacy_unverified"}
+        citations = generated.get("citations") or []
+        result["citation_validation"] = validation
+        result["citations"] = citations if validation["status"] == "valid" else []
+        result["claim_support"] = generated.get("claim_support", "not_evaluated")
+        result["status"] = generated.get("status")
+        if result["status"] == "operational_error":
+            result["error"] = generated["error"]
+            return result
 
         if answerable:
             # Citation presence is not the same as factual correctness.
-            expected_citation = f"{expected_document} — {expected_article}"
-            result["citation_hit"] = expected_citation in sources
+            result["citation_hit"] = any(
+                citation["source_document"] == expected_document
+                and citation.get("article") == expected_article
+                for citation in result["citations"]
+            )
         else:
             result["fallback_pass"] = (answer.startswith(FALLBACK)and len(sources) == 0)
 
     except Exception as exc:
-        result["error"] = f"Generation: {type(exc).__name__}: {exc}"
+        failure = operational_failure(exc if isinstance(exc, RAGError) else RAGError("internal_error", "evaluation"))
+        result["error"] = failure["error"]
+        result["status"] = failure["status"]
 
     return result
 
@@ -158,7 +187,7 @@ def main():
     parser.add_argument(
         "--output", type=Path,
         default=BASE_DIR / "evaluation_results.json",
-        help="Where to write detailed results",
+        help="New file for detailed results (existing files are never overwritten)",
     )
     parser.add_argument(
         "--limit", type=int, default=None,
@@ -176,6 +205,10 @@ def main():
 
     if args.limit is not None and args.limit <= 0:
         parser.error("--limit must be a positive integer")
+    try:
+        require_new_output(args.output)
+    except FileExistsError as exc:
+        parser.error(str(exc))
 
     with args.dataset.open("r", encoding="utf-8") as file:
         cases = json.load(file)
@@ -223,11 +256,7 @@ def main():
         "summary": summary,
         "results": results,
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(
-        json.dumps(report, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    write_new_json(args.output, report)
 
     print("-" * 76)
     print("SUMMARY")

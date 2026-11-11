@@ -1,0 +1,17 @@
+{
+  "scope": "Complete local source PDF collection, not query-selected excerpts",
+  "files": [
+    {
+      "file": "Cabinet Decision No. 106 of 2022.pdf",
+      "sha256": "54785ff7f942eb8086cf8a99c9f1fde17e3ee14ca7374792149dc0ebcde25aa0"
+    },
+    {
+      "file": "Federal Decree-Law No. 33 of 2021.pdf",
+      "sha256": "e31ffb0ee7e09312be26211126ddd79e039468a881f0f883c515b66eef6d8142"
+    },
+    {
+      "file": "Federal Decree-Law No. 9 of 2022.pdf",
+      "sha256": "69cba36b9756d5daafe5f12801374d48a3299bb485a8622e96f7aa5985b04919"
+    }
+  ]
+}

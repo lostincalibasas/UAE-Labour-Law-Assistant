@@ -1,5 +1,10 @@
-"""Generates eval_set.json (kept so the set is reproducible/editable as code)."""
-import json
+"""Generate data/eval_set.json, or a new --output file, without overwriting."""
+import argparse
+from pathlib import Path
+
+from artifact_io import write_new_json
+
+DEFAULT_OUTPUT = Path(__file__).resolve().parent / "data" / "eval_set.json"
 
 L33 = "Federal Decree-Law No. 33 of 2021"
 L9 = "Federal Decree-Law No. 9 of 2022"
@@ -367,6 +372,16 @@ meta = {
     },
     "questions": QS,
 }
-with open("eval_set.json", "w", encoding="utf-8") as f:
-    json.dump(meta, f, ensure_ascii=False, indent=2)
-print(len(QS), "questions")
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    args = parser.parse_args()
+    try:
+        write_new_json(args.output, meta)
+    except FileExistsError as exc:
+        parser.error(str(exc))
+    print(f"{len(QS)} questions saved to {args.output}")
+
+
+if __name__ == "__main__":
+    main()

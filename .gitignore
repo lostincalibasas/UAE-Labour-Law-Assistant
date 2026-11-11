@@ -20,6 +20,8 @@ data/chunks.json
 # Evaluation outputs (keep evaluation scripts and datasets)
 evaluation_results.json
 embedding_comparison_results.json
+runs/
+data/benchmarks/
 
 # System and IDE
 .vscode/
